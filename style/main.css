@@ -55,7 +55,7 @@ a {
   text-decoration: none;
 }
 #top-left {
-  height: inherit;
+
   width: 20%;
   //outline: 1px solid red;
   display: inline-block;
@@ -63,7 +63,6 @@ a {
 }
 
 #center {
-  height: inherit;
   width: 60%;
   display: inline-block;
   //outline: 3px solid pink;
@@ -74,7 +73,6 @@ a {
 #top-right {
   position: relative;
   display: block;
-  height: inherit;
   margin-left: 80%;
   //outline: 1px solid yellow;
 }
@@ -93,8 +91,7 @@ a {
 nav ul {
   height: inherit;
   width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto ;
   //outline: 1px solid yellow;
 
 }
@@ -134,28 +131,16 @@ nav ul li{
   height: 100%;
   width: 100%;
 }
-.box {
-  display: none;
-  -webkit-box-shadow: 0 8px 6px -6px #848484;
-       -moz-box-shadow: 0 8px 6px -6px #848484;
-            box-shadow: 0 8px 6px -6px #848484;
-            border-radius: 2px;
-}
-
 #main {
   height: 70vh;
   width: 96vh;
   border-radius: 18px;
   background-color: black;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   margin-top: 50px;
- 
-  
 }
 
 #screen {
-
   position: absolute;
   background-color: green;
   width: 92vh;
@@ -174,8 +159,7 @@ nav ul li{
   margin-top: 58vh;
   border-radius: 0 0 18px 18px;
   background-color: grey;
-
-    background-image: linear-gradient(130deg, #272727 0%, #1b1b1b 64%);
+  background-image: linear-gradient(130deg, #272727 0%, #1b1b1b 64%);
 }
 #text {
   color: grey;
@@ -183,33 +167,6 @@ nav ul li{
   text-align: center;
   width: 100%;
   line-height: 80px;
-}
-#box1 {
-  position: absolute;
-  margin-top: 100px;
-  width: 800px;
-  height: 800px;
-  background-color: #fbfbfb;
-  background-image: url('../img/terminal.png');
-  background-size: cover;
-}
-#box2 {
-  position: absolute;
-  width: 800px;
-  height: 800px;
-  margin-left: 600px;
-  margin-top: 100px;
-  background-image: url('../img/code.png');
-  background-size: cover;
-}
-#content_header {
-  height: 140px;
-  line-height: 120px;
-  font-family: 'Metropolis-Regular';
-}
-h1 {
-  font-weight: 400;
-  font-size: 40px;
 }
 .app {
   display: inline-block;
@@ -230,16 +187,6 @@ h1 {
   width: 70px;
   height: 70px;
   border-radius: 50%;
- 
-}
-#box3 {
-  position: absolute;
-  margin-top: -200px;
-  margin-left: -250px;
-  padding: 35px;
-  width: 800px;
-  height: 900px;
-  background-image: linear-gradient(90deg, #f7f7f7 0%, #ffffff 74%);
 }
 
 @keyframes fadeIn {
