@@ -22,10 +22,11 @@ html, body {
   font-weight: 400;
   letter-spacing: 0.2px;
   font-family: 'Metropolis-Thin', sans-serif;
-
 }
+
+
 @media (prefers-color-scheme: dark) {
-  body  { 
+  #wrapper  { 
   color: white;
   background-color: #1d1c1c;
 }
@@ -41,7 +42,7 @@ html, body {
 }
 
 @media (prefers-color-scheme: light) {
-  body  {
+  #wrapper  {
     color: black;
     background-color: #ffffff;
     background-image: linear-gradient(310deg, #c9cad0 0%, #ffffff 74%);
@@ -52,6 +53,7 @@ html, body {
     color: black;
   }
 }
+
 
 nav {
   display: block;
@@ -138,93 +140,105 @@ nav ul li{
 }
 
 #wrapper {
+  position: fixed;
   height: 100%;
   width: 100%;
-}
-#main {
-  height: 70vh;
-  width: 96vh;
-  border-radius: 18px;
-  background-color: black;
-  margin: 0 auto;
-  margin-top: 50px;
-}
 
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+/* window */
+#window {
+  position: fixed;
+  opacity: .2;
+  width: 100%;
+  height: 60vh;
+  background-color: blue;
+  z-index: -1;
+}
+/* wall */
+#wall {
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+}
+/* computer*/
+#computer {
+  position: relative;
+  width: 675px;
+  height: 450px;
+  margin-top: 25vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  border-radius: 25px;
+
+}
 #screen {
-  position: absolute;
+  position: relative;
+  width: 94%;
+  height: 70%;
+  top: 5%;
+  left: 3%;
   background-color: green;
-  width: 92vh;
-  height: 54vh;
-  margin-top: 2vh;
-  margin-left: 2vh;
-  margin-right: 2vh;
   background-image: url('../img/mojave.jpeg');
   background-size: cover;
+  z-index: 2;
 }
-
 #bezel {
-  position: absolute;
-  width: 96vh;
-  height: 12vh;
-  margin-top: 58vh;
-  border-radius: 0 0 18px 18px;
-  background-color: grey;
+  position: relative;
+  width: 100%;
+  height: 20%;
+  top: 10%;
+  border-radius: 0 0 25px 25px;
   background-image: linear-gradient(130deg, #272727 0%, #1b1b1b 64%);
+  z-index: 3;
 }
-#mac_logo {
-  display: block;
-  width: 5vh;
-  height: 5vh;
-  margin: 3vh auto;
+#comp_logo {
+  position: relative;
+  width: 8%;
+  height: 12%;
+  background-image: url('../img/comp_logo.png');
+  background-size: cover;
+  margin-top: -4%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 4;
 }
-.app {
-  display: inline-block;
-  float: right;
-  color: white;
-  text-align: center;
-  font-weight: 100;
- 
-  width: 80px;
-
+#stand {
+  position: relative;
+  width: 18%;
+  height: 15%;
+  background-image: linear-gradient(130deg, #272727 0%, #171717 64%);
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
 }
-#topbar {
-  width: 92vh;
-  height: 3vh;
-  line-height: 3vh;
-  font-family: helvetica;
+#base {
+  position: relative;
+  height: 0;
+  width: 22%;
+  margin-top: -2vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 70px solid #272727;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-radius: 8px;   
+  z-index: 0;
 }
-#topbar ul li {
-  display: inline-block;
-  float: left;
-  margin-left: 2vh;
-  height: 2vh;
-}
-#menu_logo {
-  margin-top: 0.5vh;
-  height: 2vh;
-}
-#face {
-  margin-right: 45px;
-  margin-top: 45px;
-
-}
-#face  img{
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-#dock {
-  width: 25vh;
-  height: 5vh;
-  margin: 47vh auto;
-  display: block;
-}
-#dock ul li {
-  display: inline-block;
-  float: left;
-  outline: 1px solid blue;
-  width: 5vh;
-  height: 5vh;
+ /* desk */
+ #desk {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: 30vh;
+   background: radial-gradient(#fff8f3, #928476);
+   margin-top: -1vh;
+   z-index: -1;
+ }
 
 
 }
@@ -234,9 +248,7 @@ nav ul li{
 } 
 
 @media only screen and (max-width: 600px) {
-  #main {
-    display: none;
-  }
+
   nav ul {
     width: 240px; 
   }
