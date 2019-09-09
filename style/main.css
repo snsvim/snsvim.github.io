@@ -33,6 +33,10 @@ html, body {
   #bezel {
     background-image: url('../img/alum-light.jpg');
   }
+  #screen {
+    background-image: url('../img/mojave-light.jpg');
+  }
+
   #main {box-shadow: 0 16px 12px -12px #848484;}
   #topbar {
     background-color: grey;
@@ -55,7 +59,9 @@ html, body {
 #bezel {
   background-image: url('../img/alum.jpg');
 }
-
+#screen {
+  background-image: url('../img/mojave.jpeg');
+}
 #main {
   box-shadow: 0 16px 12px -12px black;
 }
@@ -207,8 +213,8 @@ nav ul li{
   height: 70%;
   top: 5%;
   left: 3%;
-  background-color: green;
-  background-image: url('../img/mojave.jpeg');
+ 
+  
   background-size: cover;
   z-index: 2;
 }
@@ -218,8 +224,8 @@ nav ul li{
   height: 20%;
   top: 10%;
   border-radius: 0 0 25px 25px;
-  background-color: red;
   background-size: cover;
+  background-color: grey;
   background-position: center 110px;
   z-index: 3;
 }
