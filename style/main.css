@@ -213,8 +213,7 @@ nav ul li{
   height: 70%;
   top: 5%;
   left: 3%;
- 
-  
+  border-radius: 4px;
   background-size: cover;
   z-index: 2;
 }
