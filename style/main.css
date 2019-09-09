@@ -24,6 +24,29 @@ html, body {
   font-family: 'Metropolis-Thin', sans-serif;
   background-color: black;
 }
+@media (prefers-color-scheme: light) {
+  body  {
+    color: black;
+    background-color: #ffffff;
+    background-image: linear-gradient(310deg, #c9cad0 0%, #ffffff 74%);
+  }
+  #bezel {
+    background-image: url('../img/alum-light.jpg');
+  }
+  #main {box-shadow: 0 16px 12px -12px #848484;}
+  #topbar {
+    background-color: grey;
+    color: black;
+  }
+  .nav_link {
+    color: #383838;
+  }
+  #sig {
+    background-color: #383838;
+    color: white;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body  { 
   color: white;
@@ -43,26 +66,11 @@ html, body {
 .nav_link {
   color: #d2d6c3;
 }
-
+#sig {
+  background-color: white;
+  color: #0e0013;
 }
 
-@media (prefers-color-scheme: light) {
-  body  {
-    color: black;
-    background-color: #ffffff;
-    background-image: linear-gradient(310deg, #c9cad0 0%, #ffffff 74%);
-  }
-  #bezel {
-    background-image: url('../img/alum-light.jpg');
-  }
-  #main {box-shadow: 0 16px 12px -12px #848484;}
-  #topbar {
-    background-color: grey;
-    color: black;
-  }
-  .nav_link {
-    color: #383838;
-  }
 }
 
 
@@ -91,6 +99,8 @@ a {
   width: 60%;
   display: inline-block;
   //outline: 3px solid pink;
+  border-bottom: 2px solid lightgrey;
+  border-radius: 4px;
   float: left;
 
 }
@@ -103,10 +113,11 @@ a {
 }
 
 #sig {
-  margin-left: 25px;
+  
   line-height: 70px;
   font-size: 25px;
-  color: white;
+  padding: 20px 25px 10px 25px;
+  border-radius: 0 0 5px 0;
 }
 #logo img {
   height: 65px;
@@ -118,6 +129,7 @@ nav ul {
   width: 400px;
   margin: 0 auto ;
   //outline: 1px solid yellow;
+
 
 }
 nav ul li{
@@ -135,6 +147,7 @@ nav ul li{
   line-height: 70px;
   //outline: 1px solid green;
   font-size: 25px;
+
 
 }
 
@@ -270,6 +283,9 @@ nav ul li{
   nav ul li:nth-child(1),nav ul li:nth-child(2),nav ul li:nth-child(4),nav ul li:nth-child(5) {
       display: none;
   }
+  #center {
+    border: none;  
+  }
   #logo {
     width: 100%;
   }
@@ -287,7 +303,7 @@ nav ul li{
   #comp_logo {
     position: relative;
     width: 25px;
-    height: 25px;
+    height: 12%;
   #bezel {
     border-radius: 0 0 15px 15px;
   }
@@ -296,7 +312,8 @@ nav ul li{
 
 @media only screen and (max-width: 400px) {
   #center {
-    width: 30%;  
+    width: 30%;
+    border: none;  
   }
 
   nav ul {
