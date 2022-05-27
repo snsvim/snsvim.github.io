@@ -14,7 +14,7 @@ function handleRestartGame() {
 	gameActive = true;
 	currentPlayer = "X";
 	
-	//insert empty string "" into each cell within gameState
+	//Insert empty string "" into each cell within gameState
 	gameState = ["","","","","","","","","","","","","","","","",];
 	statusDisplay.innerHTML = `It's <span style="color:#2fd62d">${currentPlayer}</span>'s turn`;
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
@@ -22,7 +22,9 @@ function handleRestartGame() {
 }
 
 
+//lListen for user input and play a turn based on which cell is clicked
 function handleCellClick(clickedCellEvent) {
+	//play 'click' sound when cell is clicked
 	clickSound = new Audio('clicksound.mp3');
 	clickSound.play();
 	const clickedCell = clickedCellEvent.target;
@@ -61,7 +63,7 @@ const winningConditions = [
 ];
 
 function handleResultValidation() {
-    //check win conditions
+    //Check win conditions
 	let roundWon = false;
 	for (let i = 0; i <= 9; i++) {
 		const winCondition = winningConditions[i];
@@ -86,7 +88,7 @@ function handleResultValidation() {
 	}
 
 	if (roundWon) {
-        //play win music
+        //Play win music
 		winSound.play();
 		playerColor = "#9e37ff";
 		if (currentPlayer == "X") {playerColor = "#2fd62d"};
@@ -95,7 +97,7 @@ function handleResultValidation() {
 		return
 	}
 
-	//check for draw condition
+	//Check for draw condition
 	let roundDraw =!gameState.includes("");
 	if (roundDraw) {
 		statusDisplay.innerHTML = `Draw!`;
@@ -106,6 +108,7 @@ function handleResultValidation() {
 	handlePlayerChange();
 }
 
+//Switch players
 function handlePlayerChange() {
 	currentPlayer = currentPlayer === "X" ? "O" : "X";
 	playerColor = "#9e37ff";
